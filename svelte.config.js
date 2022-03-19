@@ -15,9 +15,9 @@ const config = {
 			assets: 'docs',
 		}),
 
-		// paths: {
-		// 	base: dev ? '' : '/pechtold-architekten-website',
-		// },
+		paths: {
+			base: dev ? '' : '/pechtold-architekten-website',
+		},
 
 		prerender: {
 			default: true
