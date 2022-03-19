@@ -4,26 +4,27 @@
 </script>
 
 <header>
-
+	<a sveltekit:prefetch href={base}>Pechtold Architekten</a>
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
 		<ul>
-			<li class:active={$page.url.pathname === base}><a sveltekit:prefetch href={base}>Home</a></li>
-			<li class:active={$page.url.pathname === `${base}/about`}>
-				<a sveltekit:prefetch href="{base}/about">About</a>
+			<li class:active={$page.url.pathname === encodeURI(`${base}/büro`)}>
+				<a sveltekit:prefetch href="{base}/büro">Büro</a>
+			</li>
+			<li class:active={$page.url.pathname === `${base}/projekte`}>
+				<a sveltekit:prefetch href="{base}/projekte">Projekte</a>
+			</li>
+			<li class:active={$page.url.pathname === `${base}/kontakt`}>
+				<a sveltekit:prefetch href="{base}/kontakt">Kontakt</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
 </header>
 
 <style>
 	header {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: space-between;
 	}
 
