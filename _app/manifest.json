@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-4345673d.js",
+    "file": "start-c0bfa0ae.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -12,6 +12,7 @@
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.svelte",
       "src/routes/projekte/index.svelte",
+      "src/routes/projekte/[slug].svelte",
       "src/routes/kontakt.svelte",
       "src/routes/büro.svelte"
     ]
@@ -39,7 +40,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-12b464ec.js",
+    "file": "pages/index.svelte-2973cac9.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -48,8 +49,18 @@
     ]
   },
   "src/routes/projekte/index.svelte": {
-    "file": "pages/projekte/index.svelte-d4a8ca98.js",
+    "file": "pages/projekte/index.svelte-88649181.js",
     "src": "src/routes/projekte/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5de48d90.js",
+      "_paths-396f020f.js"
+    ]
+  },
+  "src/routes/projekte/[slug].svelte": {
+    "file": "pages/projekte/_slug_.svelte-5376970c.js",
+    "src": "src/routes/projekte/[slug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
