@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import SvelteMarkdown from 'svelte-markdown';
     export let contact;
 </script>
