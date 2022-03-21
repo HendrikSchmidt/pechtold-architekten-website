@@ -4,7 +4,7 @@
 </script>
 
 <header>
-	<a sveltekit:prefetch href={base}>Pechtold Architekten</a>
+	<a sveltekit:prefetch href="{base}/">Pechtold Architekten</a>
 	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === encodeURI(`${base}/büro`)}>

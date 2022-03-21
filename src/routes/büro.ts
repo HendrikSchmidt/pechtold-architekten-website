@@ -1,5 +1,7 @@
+import { variables } from '$lib/variables';
+
 export async function get() {
-    const response = await fetch('http://localhost:1337/api/buero');
+    const response = await fetch(`${variables.apiPath}/buero`);
     const office = await response.json();
 
     if (office) {

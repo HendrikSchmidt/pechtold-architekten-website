@@ -1,5 +1,7 @@
+import { variables } from '$lib/variables';
+
 export async function get() {
-    const response = await fetch('http://localhost:1337/api/kontakt');
+    const response = await fetch(`${variables.apiPath}/kontakt`);
     const contact = await response.json();
 
     if (contact) {
