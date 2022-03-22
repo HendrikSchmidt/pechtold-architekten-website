@@ -1,0 +1,1 @@
+import{s as c}from"./utils-1d28902d.js";const e="https://pechtold-architekten-cms.herokuapp.com/api",o=async(a,n)=>{const r=await(await fetch(`${e}/${a}`)).json(),s={};return r.data.forEach(t=>s[c(t.attributes[n])]=t.id),s},g={apiPath:e,markdownOptions:{breaks:!0},projectSlugsToIds:o("projekte","Titel"),categorySlugsToIds:o("kategorien","Anzeigename")};export{g as v};

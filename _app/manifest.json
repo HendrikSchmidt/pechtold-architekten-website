@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-c0bfa0ae.js",
+    "file": "start-6cb52b6b.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-5de48d90.js",
+      "_vendor-e86d0398.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -12,83 +12,123 @@
       ".svelte-kit/runtime/components/error.svelte",
       "src/routes/index.svelte",
       "src/routes/projekte/index.svelte",
-      "src/routes/projekte/[slug].svelte",
+      "src/routes/projekte/[categorySlug].svelte",
       "src/routes/kontakt.svelte",
+      "src/routes/projekt/[projectSlug].svelte",
       "src/routes/büro.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-b193cd4f.js",
+    "file": "pages/__layout.svelte-b1665fee.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js",
-      "_paths-396f020f.js"
+      "_vendor-e86d0398.js",
+      "_variables-e571050f.js",
+      "_paths-396f020f.js",
+      "_utils-1d28902d.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-c0600863.css"
+      "assets/pages/__layout.svelte-a9aad585.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-9919c221.js",
+    "file": "error.svelte-fb27186c.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js"
+      "_vendor-e86d0398.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-2973cac9.js",
+    "file": "pages/index.svelte-46d1da20.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js"
+      "_vendor-e86d0398.js"
     ]
   },
   "src/routes/projekte/index.svelte": {
-    "file": "pages/projekte/index.svelte-88649181.js",
+    "file": "pages/projekte/index.svelte-594fbeb7.js",
     "src": "src/routes/projekte/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js",
-      "_paths-396f020f.js"
+      "_vendor-e86d0398.js",
+      "_ProjectList-7b0f7600.js",
+      "_paths-396f020f.js",
+      "_utils-1d28902d.js"
     ]
   },
-  "src/routes/projekte/[slug].svelte": {
-    "file": "pages/projekte/_slug_.svelte-5376970c.js",
-    "src": "src/routes/projekte/[slug].svelte",
+  "src/routes/projekte/[categorySlug].svelte": {
+    "file": "pages/projekte/_categorySlug_.svelte-f9d0db3b.js",
+    "src": "src/routes/projekte/[categorySlug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js"
+      "_vendor-e86d0398.js",
+      "_ProjectList-7b0f7600.js",
+      "_paths-396f020f.js",
+      "_utils-1d28902d.js"
     ]
   },
   "src/routes/kontakt.svelte": {
-    "file": "pages/kontakt.svelte-11e37f83.js",
+    "file": "pages/kontakt.svelte-fe591237.js",
     "src": "src/routes/kontakt.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js"
+      "_vendor-e86d0398.js",
+      "_variables-e571050f.js",
+      "_utils-1d28902d.js"
+    ]
+  },
+  "src/routes/projekt/[projectSlug].svelte": {
+    "file": "pages/projekt/_projectSlug_.svelte-25675ca3.js",
+    "src": "src/routes/projekt/[projectSlug].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-e86d0398.js",
+      "_variables-e571050f.js",
+      "_utils-1d28902d.js"
     ]
   },
   "src/routes/büro.svelte": {
-    "file": "pages/büro.svelte-65f0f4fd.js",
+    "file": "pages/büro.svelte-a174cb05.js",
     "src": "src/routes/büro.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5de48d90.js"
+      "_vendor-e86d0398.js",
+      "_variables-e571050f.js",
+      "_utils-1d28902d.js"
     ]
   },
-  "_vendor-5de48d90.js": {
-    "file": "chunks/vendor-5de48d90.js"
+  "_vendor-e86d0398.js": {
+    "file": "chunks/vendor-e86d0398.js"
   },
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
+  },
+  "_variables-e571050f.js": {
+    "file": "chunks/variables-e571050f.js",
+    "imports": [
+      "_utils-1d28902d.js"
+    ]
+  },
+  "_utils-1d28902d.js": {
+    "file": "chunks/utils-1d28902d.js"
+  },
+  "_ProjectList-7b0f7600.js": {
+    "file": "chunks/ProjectList-7b0f7600.js",
+    "imports": [
+      "_vendor-e86d0398.js",
+      "_paths-396f020f.js",
+      "_utils-1d28902d.js"
+    ]
   }
 }
