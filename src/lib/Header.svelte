@@ -4,7 +4,6 @@
 	import { sluggify } from "./utils";
 	export let categoryNames;
 	const projectPaths = [`${base}/projekte`, ...categoryNames.map(category => encodeURI(`${base}/projekte/${sluggify(category)}`))];
-	console.log(projectPaths)
 </script>
 
 <header>
