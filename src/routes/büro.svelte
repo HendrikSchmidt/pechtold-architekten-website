@@ -4,4 +4,8 @@
     export let office;
 </script>
 
-<SvelteMarkdown source={office.Profil} options={variables.markdownOptions} />
+<div class="row justify-content-center">
+    <div class="col-10">
+        <SvelteMarkdown source={office.Profil} options={variables.markdownOptions} />
+    </div>
+</div>

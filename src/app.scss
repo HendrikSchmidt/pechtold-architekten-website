@@ -1,0 +1,27 @@
+body {
+    font-family: 'Open Sans',sans-serif;
+}
+
+small {
+    h1 { font-size: calc(1rem + 1.2vw); }
+    h2 { font-size: calc(0.9rem + 0.9vw); }
+    h3 { font-size: calc(0.85rem + 0.6vw); }
+    h4 { font-size: calc(0.8rem + 0.3vw); }
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+footer ul li {
+    margin-right: 1.2rem;
+}
+
+footer ul li:first-child {
+    display: block;
+}
