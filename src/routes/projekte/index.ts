@@ -6,7 +6,7 @@ export async function get() {
 
     if (projects) {
         return {
-            body: { projects }
+            body: { projects: projects.data }
         };
     }
 

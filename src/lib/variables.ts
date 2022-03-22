@@ -3,15 +3,19 @@ import { sluggify } from "./utils";
 const dev = process.env.NODE_ENV === 'development';
 const apiPath = dev ? 'http://localhost:1337/api' : 'https://pechtold-architekten-cms.herokuapp.com/api';
 
-const getSlugsToIdsMapping = async () => {
-    const response = await fetch(`${apiPath}/projekte`);
-    const projects = await response.json();
+const getSlugsToIdsMapping = async (route, fieldToGetSlugFrom) => {
+    const response = await fetch(`${apiPath}/${route}`);
+    const collection = await response.json();
     const slugsToIds = {};
-    projects.data.forEach(project => slugsToIds[sluggify(project.attributes.Titel)] = project.id);
+    collection.data.forEach(object => slugsToIds[sluggify(object.attributes[fieldToGetSlugFrom])] = object.id);
     return slugsToIds;
 }
 
 export const variables = {
     apiPath,
-    slugsToIds: getSlugsToIdsMapping(),
+    markdownOptions: {
+        breaks: true,
+    },
+    projectSlugsToIds: getSlugsToIdsMapping('projekte', 'Titel'),
+    categorySlugsToIds: getSlugsToIdsMapping('kategorien', 'Anzeigename'),
 };
