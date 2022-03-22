@@ -1,6 +1,6 @@
 <script lang="ts">
     export let homepage;
-    const gallery = homepage.data.attributes.Aufmachergalerie.data;
+    const gallery = homepage.Aufmachergalerie.data;
 </script>
 
 {#each gallery as image}

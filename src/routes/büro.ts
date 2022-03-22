@@ -2,11 +2,11 @@ import { variables } from '$lib/variables';
 
 export async function get() {
     const response = await fetch(`${variables.apiPath}/buero`);
-    const office = await response.json();
+    const officeData = await response.json();
 
-    if (office) {
+    if (officeData) {
         return {
-            body: { office }
+            body: { office: officeData.data.attributes }
         };
     }
 

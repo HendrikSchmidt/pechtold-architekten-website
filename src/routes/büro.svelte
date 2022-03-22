@@ -1,7 +1,7 @@
 <script lang="ts">
     import SvelteMarkdown from 'svelte-markdown';
+    import { variables } from "$lib/variables";
     export let office;
-    const source = office.data.attributes.Profil;
 </script>
 
-<SvelteMarkdown {source} />
+<SvelteMarkdown source={office.Profil} options={variables.markdownOptions} />

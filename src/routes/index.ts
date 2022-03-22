@@ -2,11 +2,11 @@ import { variables } from '$lib/variables';
 
 export async function get() {
     const response = await fetch(`${variables.apiPath}/startseite?populate=*`);
-    const homepage = await response.json();
+    const homepageData = await response.json();
 
-    if (homepage) {
+    if (homepageData) {
         return {
-            body: { homepage }
+            body: { homepage: homepageData.data.attributes }
         };
     }
 
