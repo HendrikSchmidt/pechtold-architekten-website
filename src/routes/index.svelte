@@ -4,5 +4,5 @@
 </script>
 
 {#each gallery as image}
-    <img src="{image.attributes.url}"  alt="{image.attributes.alternativeText}" />
+    <img src="{image.attributes.url}"  alt="{image.attributes.alternativeText}" class="img-fluid"/>
 {/each}

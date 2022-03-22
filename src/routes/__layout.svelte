@@ -24,7 +24,7 @@
 
 <Header {categoryNames} />
 
-<main>
+<main class="container">
 	<slot />
 </main>
 

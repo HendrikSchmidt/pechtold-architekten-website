@@ -5,20 +5,25 @@
 	export let categoryNames;
 </script>
 
-<header>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<div class="container-fluid">
-			<a class="navbar-brand" sveltekit:prefetch href="{base}/">Pechtold Architekten</a>
+<header class="pt-2">
+	<nav class="navbar navbar-expand-md navbar-light flex-column">
+		<div class="container title-container justify-content-md-center">
+			<a class="title" sveltekit:prefetch href="{base}/">
+				<span>Pechtold</span>
+				<span>Architekten</span>
+			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+		</div>
+		<div class="container">
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<ul class="navbar-nav mb-2 mb-lg-0 w-100 justify-content-around">
 					<li class="nav-item">
-						<a sveltekit:prefetch class:active={$page.url.pathname === encodeURI(`${base}/büro`)} href="{base}/büro">Büro</a>
+						<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === encodeURI(`${base}/büro`)} href="{base}/büro">Büro</a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Projekte
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -29,7 +34,7 @@
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a sveltekit:prefetch class:active={$page.url.pathname === `${base}/kontakt`} href="{base}/kontakt">Kontakt</a>
+						<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === `${base}/kontakt`} href="{base}/kontakt">Kontakt</a>
 					</li>
 				</ul>
 			</div>
@@ -37,5 +42,22 @@
 	</nav>
 </header>
 
-<style>
+<style lang="scss">
+	.title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		line-height: 1;
+		:first-child {
+			font-weight: 600;
+			font-size: 2.75rem;
+			color: #6685a3;
+		}
+		font-size: 2.2rem;
+		font-weight: 200;
+		letter-spacing: .03em;
+		color: #666;
+	}
 </style>
