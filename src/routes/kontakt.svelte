@@ -4,11 +4,9 @@
     export let contact;
 </script>
 
-<div class="row justify-content-center">
-    <div class="col-10">
+<div class="card">
+    <div class="card-body">
         <SvelteMarkdown source={contact.Langfassung} options={variables.markdownOptions} />
-    </div>
-    <div class="col-10">
         <div class="accordion accordion-flush border-top" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">

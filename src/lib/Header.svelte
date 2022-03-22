@@ -6,37 +6,39 @@
 	const projectPaths = [`${base}/projekte`, ...categoryNames.map(category => encodeURI(`${base}/projekte/${sluggify(category)}`))];
 </script>
 
-<header>
-	<nav class="navbar navbar-expand navbar-light flex-column">
-		<div class="container title-container justify-content-center p-2">
-			<a class="title" sveltekit:prefetch href="{base}/">
-				<span>Pechtold</span>
-				<span>Architekten</span>
-			</a>
-		</div>
-		<div class="container menu-bar">
-			<ul class="navbar-nav mb-2 w-100 justify-content-around border-top border-bottom">
-				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === encodeURI(`${base}/büro`)} href="{base}/büro">Büro</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" class:active={projectPaths.includes($page.url.pathname)} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Projekte
-					</a>
-					<ul class="dropdown-menu text-center start-50 translate-middle-x m-0 p-0" aria-labelledby="navbarDropdown">
-						<li><a sveltekit:prefetch class="dropdown-item" class:active={$page.url.pathname === `${base}/projekte`} href="{base}/projekte">Übersicht</a></li>
-						{#each categoryNames as category}
-						<li><hr class="dropdown-divider m-0"></li>
-						<li><a sveltekit:prefetch class="dropdown-item" class:active={$page.url.pathname === encodeURI(`${base}/projekte/${sluggify(category)}`)} href="{base}/projekte/{sluggify(category)}">{category}</a></li>
-						{/each}
-					</ul>
-				</li>
-				<li class="nav-item">
-					<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === `${base}/kontakt`} href="{base}/kontakt">Kontakt</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+<header class="container">
+	<div class="row justify-content-center">
+		<nav class="col-lg-10 navbar navbar-expand navbar-light flex-column">
+			<div class="container title-container justify-content-center p-2">
+				<a class="title" sveltekit:prefetch href="{base}/">
+					<span>Pechtold</span>
+					<span>Architekten</span>
+				</a>
+			</div>
+			<div class="container menu-bar p-0">
+				<ul class="navbar-nav mb-2 w-100 justify-content-around border-top border-bottom">
+					<li class="nav-item">
+						<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === encodeURI(`${base}/büro`)} href="{base}/büro">Büro</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" class:active={projectPaths.includes($page.url.pathname)} id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Projekte
+						</a>
+						<ul class="dropdown-menu text-center start-50 translate-middle-x m-0 p-0" aria-labelledby="navbarDropdown">
+							<li><a sveltekit:prefetch class="dropdown-item" class:active={$page.url.pathname === `${base}/projekte`} href="{base}/projekte">Übersicht</a></li>
+							{#each categoryNames as category}
+							<li><hr class="dropdown-divider m-0"></li>
+							<li><a sveltekit:prefetch class="dropdown-item" class:active={$page.url.pathname === encodeURI(`${base}/projekte/${sluggify(category)}`)} href="{base}/projekte/{sluggify(category)}">{category}</a></li>
+							{/each}
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === `${base}/kontakt`} href="{base}/kontakt">Kontakt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
 </header>
 
 <style lang="scss">

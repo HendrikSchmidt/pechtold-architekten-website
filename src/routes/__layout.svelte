@@ -31,8 +31,12 @@
 
 <Header {categoryNames} />
 
-<main class="container">
-	<slot />
+<main class="container pb-4">
+	<div class="row justify-content-center">
+		<div class="col-lg-10">
+			<slot />
+		</div>
+	</div>
 </main>
 
 <!--<footer class="position-fixed bottom-0 bg-body w-100">-->
