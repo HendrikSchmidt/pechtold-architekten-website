@@ -8,7 +8,7 @@
     <a href="{base}/projekt/{sluggify(project.attributes.Titel)}">
         <div class="card mb-3">
             {#if project.attributes.Fotos.data}
-                <img class="card-img-top" src="{project.attributes.Fotos.data[0].url}"  alt="{project.attributes.Fotos.data[0].alternativeText}" />
+                <img class="card-img-top" src="{project.attributes.Fotos.data[0].attributes.url}"  alt="{project.attributes.Fotos.data[0].attributes.alternativeText}" />
             {/if}
             <div class="card-body text-dark">
                 <h5 class="card-title">{project.attributes.Titel}</h5>
