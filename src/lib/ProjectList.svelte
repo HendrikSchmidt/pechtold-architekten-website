@@ -4,23 +4,35 @@
     export let projects;
 </script>
 
-{#each projects as project}
-    <a href="{base}/projekt/{sluggify(project.attributes.Titel)}">
-        <div class="card mb-3">
-            {#if project.attributes.Fotos.data}
-                <img class="card-img-top" src="{project.attributes.Fotos.data[0].attributes.url}"  alt="{project.attributes.Fotos.data[0].attributes.alternativeText}" />
-            {/if}
-            <div class="card-body text-dark">
-                <h5 class="card-title">{project.attributes.Titel}</h5>
-<!--                <p class="card-text">{project.attributes.Adresse}</p>-->
-                <p class="card-text"><small class="text-muted">{project.attributes.Dauer}</small></p>
+<div class="row">
+    {#each projects as project}
+        <a class="col-6" sveltekit:prefetch href="{base}/projekt/{sluggify(project.attributes.Titel)}">
+            <div class="card mb-3">
+                {#if project.attributes.Fotos.data}
+                    <div class="img-container">
+                        <img class="card-img-top position-relative top-50 translate-middle-y" src="{project.attributes.Fotos.data[0].attributes.url}"  alt="{project.attributes.Fotos.data[0].attributes.alternativeText}" />
+                    </div>
+                {/if}
+                <div class="card-body text-dark">
+                    <h5 class="card-title">{project.attributes.Titel}</h5>
+    <!--                <p class="card-text">{project.attributes.Adresse}</p>-->
+                    <p class="card-text"><small class="text-muted">{project.attributes.Dauer}</small></p>
+                </div>
             </div>
-        </div>
-    </a>
-{/each}
+        </a>
+    {/each}
+</div>
 
-<style>
+<style lang="scss">
     a {
-        text-decoration: none;
+      text-decoration: none;
+    }
+    .img-container {
+      height: 15rem;
+      overflow: hidden;
+      .card-img-top {
+        object-fit: cover;
+        border-radius: 0;
+      }
     }
 </style>
