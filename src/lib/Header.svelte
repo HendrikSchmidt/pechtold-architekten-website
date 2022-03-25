@@ -8,15 +8,15 @@
 
 <header class="container">
 	<div class="row justify-content-center">
-		<nav class="col-lg-10 navbar navbar-expand navbar-light flex-column">
-			<div class="container title-container justify-content-center p-2">
-				<a class="title" sveltekit:prefetch href="{base}/">
+		<nav class="col-lg-10 navbar navbar-expand navbar-light flex-column py-3">
+			<div class="container title-container justify-content-center pb-3">
+				<a class="title d-flex flex-md-column justify-content-center text-center" sveltekit:prefetch href="{base}/">
 					<span>Pechtold</span>
 					<span>Architekten</span>
 				</a>
 			</div>
 			<div class="container menu-bar p-0">
-				<ul class="navbar-nav mb-2 w-100 justify-content-around border-top border-bottom">
+				<ul class="navbar-nav w-100 justify-content-around">
 					<li class="nav-item">
 						<a sveltekit:prefetch class="nav-link" class:active={$page.url.pathname === encodeURI(`${base}/büro`)} href="{base}/büro">Büro</a>
 					</li>
@@ -27,7 +27,6 @@
 						<ul class="dropdown-menu text-center start-50 translate-middle-x m-0 p-0" aria-labelledby="navbarDropdown">
 							<li><a sveltekit:prefetch class="dropdown-item" class:active={$page.url.pathname === `${base}/projekte`} href="{base}/projekte">Übersicht</a></li>
 							{#each categoryNames as category}
-							<li><hr class="dropdown-divider m-0"></li>
 							<li><a sveltekit:prefetch class="dropdown-item" class:active={$page.url.pathname === encodeURI(`${base}/projekte/${sluggify(category)}`)} href="{base}/projekte/{sluggify(category)}">{category}</a></li>
 							{/each}
 						</ul>
@@ -42,6 +41,10 @@
 </header>
 
 <style lang="scss">
+	@import '../../node_modules/bootstrap/scss/_functions';
+	@import '../../node_modules/bootstrap/scss/_variables';
+	@import '../../node_modules/bootstrap/scss/mixins/_breakpoints';
+
 	.title {
 		text-decoration: none;
 		text-transform: uppercase;
@@ -51,19 +54,40 @@
 			color: #6685a3;
 			letter-spacing: .05em;
 		}
-		font-size: 2.2rem;
+		font-size: calc(1rem + 1vw);
 		font-weight: 400;
 		letter-spacing: .02em;
 		color: #666;
 	}
 
+	@include media-breakpoint-up(md) {
+		.title span:first-child {
+			font-size: 2.5rem;
+		}
+		.title span:last-child {
+			font-size: 2rem;
+		}
+	}
+
 	.menu-bar {
+		ul {
+			border-top: 1px solid #6685a3;
+			border-bottom: 1px solid #6685a3;
+		}
 		.dropdown-menu {
 			border-radius: 0;
+			border: 1px solid #6685a3;
+			.dropdown-item:hover {
+				background-color: aliceblue;
+			}
 		}
 		.nav-item > a {
-			padding-top: 2px;
+			padding: .25rem 1rem .5rem;
 			border-top: 4px solid transparent;
+
+			&:hover {
+				background-color: aliceblue;
+			}
 
 			&.active {
 				border-color: #6685a3;

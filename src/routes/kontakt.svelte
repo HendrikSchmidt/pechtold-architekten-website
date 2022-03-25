@@ -14,7 +14,7 @@
                         Impressum
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse px-3" aria-labelledby="panelsStayOpen-headingOne">
                     <small class="accordion-body">
                         <SvelteMarkdown source={contact.Impressum} options={variables.markdownOptions} />
                     </small>
@@ -26,7 +26,7 @@
                         Datenschutzerklärung
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse px-3" aria-labelledby="panelsStayOpen-headingTwo">
                     <small class="accordion-body">
                         <SvelteMarkdown source={contact.Datenschutz} options={variables.markdownOptions} />
                     </small>
@@ -37,8 +37,11 @@
 </div>
 
 <style>
-    .accordion-button:not(.collapsed) {
+    .accordion-item {
+        background-color: aliceblue;
+    }
+    .accordion-button {
         color: #212529;
-        background-color: #fff;
+        background-color: aliceblue;
     }
 </style>

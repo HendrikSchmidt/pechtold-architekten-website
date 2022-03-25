@@ -26,7 +26,6 @@
 	import Header from '$lib/Header.svelte';
 	import '../app.scss';
 	export let categoryNames;
-	export let contact;
 </script>
 
 <Header {categoryNames} />

@@ -6,33 +6,40 @@
 
 <div class="row">
     {#each projects as project}
-        <a class="col-6" sveltekit:prefetch href="{base}/projekt/{sluggify(project.attributes.Titel)}">
+        <a class="col-md-6 text-dark" sveltekit:prefetch href="{base}/projekt/{sluggify(project.attributes.Titel)}">
             <div class="card mb-3">
+                <div class="card-body">
+                    <p class="duration card-text m-0"><small class="text-muted">{project.attributes.Dauer}</small></p>
+                    <h5 class="card-title m-0">{project.attributes.Titel}</h5>
+    <!--                <p class="card-text">{project.attributes.Adresse}</p>-->
+                </div>
                 {#if project.attributes.Fotos.data}
                     <div class="img-container">
-                        <img class="card-img-top position-relative top-50 translate-middle-y" src="{project.attributes.Fotos.data[0].attributes.url}"  alt="{project.attributes.Fotos.data[0].attributes.alternativeText}" />
+                        <img class="card-img-bottom" src="{project.attributes.Fotos.data[0].attributes.url}"  alt="{project.attributes.Fotos.data[0].attributes.alternativeText}" />
                     </div>
                 {/if}
-                <div class="card-body text-dark">
-                    <h5 class="card-title">{project.attributes.Titel}</h5>
-    <!--                <p class="card-text">{project.attributes.Adresse}</p>-->
-                    <p class="card-text"><small class="text-muted">{project.attributes.Dauer}</small></p>
-                </div>
             </div>
         </a>
     {/each}
 </div>
 
 <style lang="scss">
+    @import '../../node_modules/bootstrap/scss/_functions';
+    @import '../../node_modules/bootstrap/scss/_variables';
+    @import '../../node_modules/bootstrap/scss/mixins/_breakpoints';
+
     a {
-      text-decoration: none;
+        text-decoration: none;
     }
     .img-container {
-      height: 15rem;
-      overflow: hidden;
-      .card-img-top {
-        object-fit: cover;
-        border-radius: 0;
-      }
+        height: 15rem;
+        overflow: hidden;
+        .card-img-bottom {
+            width:100%;
+            height:100%;
+            object-position: center center;
+            object-fit: cover;
+            border-radius: 0;
+        }
     }
 </style>
