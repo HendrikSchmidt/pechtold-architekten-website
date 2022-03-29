@@ -5,6 +5,7 @@
 
 	export let homepage;
 	const gallery = homepage.Aufmachergalerie.data;
+	const imageToShow = gallery[0].attributes;
 
 	title.clear();
 </script>
@@ -12,7 +13,7 @@
 <div class="row justify-content-center">
 	<div class="col">
 		<div class="img-container py-2 d-flex justify-content-center overflow-hidden">
-			<img src={gallery[0].attributes.url} alt={gallery[0].attributes.alternativeText} />
+			<img src={imageToShow.formats.large.url} alt={gallery[0].attributes.alternativeText} />
 		</div>
 		<div class="card mt-4">
 			<div class="card-body text-center small">
