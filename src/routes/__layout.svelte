@@ -28,9 +28,5 @@
 <Header {categoryNames} />
 
 <main class="container pb-3">
-	<div class="row justify-content-center">
-		<div class="col-lg-10">
-			<slot />
-		</div>
-	</div>
+	<slot />
 </main>

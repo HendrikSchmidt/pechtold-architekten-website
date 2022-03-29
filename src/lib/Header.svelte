@@ -12,7 +12,7 @@
 
 <header class="container">
 	<div class="row justify-content-center">
-		<nav class="col-lg-10 navbar navbar-expand flex-column py-3">
+		<nav class="col navbar navbar-expand flex-column py-3">
 			<div class="container title-container justify-content-center pb-3">
 				<a
 					class="title d-flex flex-column justify-content-center text-center"
