@@ -36,7 +36,7 @@
 					<div class="carousel-item" class:active={index === 0}>
 						<img
 							loading="lazy"
-							src={image.attributes.url}
+							src={image.attributes.formats.large.url}
 							class="d-block w-100"
 							alt={image.attributes.alternativeText}
 						/>
