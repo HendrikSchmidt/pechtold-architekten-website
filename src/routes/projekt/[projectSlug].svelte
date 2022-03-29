@@ -44,7 +44,7 @@
 				{/each}
 			</div>
 			<button
-				class="carousel-control-prev"
+				class="carousel-control carousel-control-prev"
 				type="button"
 				data-bs-target="#projectPhotos"
 				data-bs-slide="prev"
@@ -53,7 +53,7 @@
 				<span class="visually-hidden">Previous</span>
 			</button>
 			<button
-				class="carousel-control-next"
+				class="carousel-control carousel-control-next"
 				type="button"
 				data-bs-target="#projectPhotos"
 				data-bs-slide="next"
@@ -78,16 +78,23 @@
 
 <style lang="scss">
 	.carousel-inner {
-		height: 500px;
+		background-color: #6685a3;
+		aspect-ratio: 3 / 2;
 
 		.carousel-item {
 			height: 100%;
 
 			img {
-				width: 100%;
+				min-width: 100%;
 				height: 100%;
 				object-fit: contain;
 			}
 		}
+	}
+	.carousel-control-prev {
+		cursor: w-resize;
+	}
+	.carousel-control-next {
+		cursor: e-resize;
 	}
 </style>

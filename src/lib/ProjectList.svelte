@@ -35,12 +35,12 @@
 </div>
 
 <style lang="scss">
-a {
-		text-decoration: none;
-	}
+	a {
+			text-decoration: none;
+		}
 
 	.img-container {
-		height: calc(100px + 15vw);
+		aspect-ratio: 3 / 2;
 		overflow: hidden;
 
 		.card-img-bottom {
