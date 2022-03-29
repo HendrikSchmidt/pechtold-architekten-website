@@ -8,9 +8,9 @@
 
 <header class="container">
 	<div class="row justify-content-center">
-		<nav class="col-lg-10 navbar navbar-expand navbar-light flex-column py-3">
+		<nav class="col-lg-10 navbar navbar-expand flex-column py-3">
 			<div class="container title-container justify-content-center pb-3">
-				<a class="title d-flex flex-md-column justify-content-center text-center" sveltekit:prefetch href="{base}/">
+				<a class="title d-flex flex-column justify-content-center text-center" sveltekit:prefetch href="{base}/">
 					<span>Pechtold</span>
 					<span>Architekten</span>
 				</a>
@@ -41,32 +41,20 @@
 </header>
 
 <style lang="scss">
-	@import '../../node_modules/bootstrap/scss/_functions';
-	@import '../../node_modules/bootstrap/scss/_variables';
-	@import '../../node_modules/bootstrap/scss/mixins/_breakpoints';
-
 	.title {
 		text-decoration: none;
 		text-transform: uppercase;
 		line-height: 1;
 		:first-child {
+			font-size: calc(1.5rem + 1.5vw);
 			font-weight: 600;
 			color: #6685a3;
 			letter-spacing: .05em;
 		}
-		font-size: calc(1rem + 1vw);
+		font-size: calc(1.2rem + 1.2vw);
 		font-weight: 400;
 		letter-spacing: .02em;
 		color: #666;
-	}
-
-	@include media-breakpoint-up(md) {
-		.title span:first-child {
-			font-size: 2.5rem;
-		}
-		.title span:last-child {
-			font-size: 2rem;
-		}
 	}
 
 	.menu-bar {
@@ -82,6 +70,8 @@
 			}
 		}
 		.nav-item > a {
+			color: #6685a3;
+			font-weight: 300;
 			padding: .25rem 1rem .5rem;
 			border-top: 4px solid transparent;
 
@@ -93,11 +83,15 @@
 				border-color: #6685a3;
 			}
 		}
-		.dropdown-item.active {
-			background-color: transparent;
-			color: black;
-			border-left: 4px solid #6685a3;
-			border-right: 4px solid #6685a3;
+		.dropdown-item {
+			color: #6685a3;
+			font-weight: 300;
+			&.active {
+				background-color: transparent;
+				color: black;
+				border-left: 4px solid #6685a3;
+				border-right: 4px solid #6685a3;
+			}
 		}
 	}
 </style>

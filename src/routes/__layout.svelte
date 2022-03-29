@@ -7,16 +7,9 @@
 		const categories = await categoriesResponse.json();
 		const categoryNames = categories.data.map(category => category.attributes.Anzeigename);
 
-		const contactResponse = await fetch(`${variables.apiPath}/kontakt`);
-		const contactData = await contactResponse.json();
-		const contact = contactData.data.attributes.Kurzfassung;
-
 		return {
 			status: categoriesResponse.status,
-			props: {
-				categoryNames,
-				contact,
-			}
+			props: { categoryNames }
 		};
 	}
 </script>
@@ -30,19 +23,10 @@
 
 <Header {categoryNames} />
 
-<main class="container pb-4">
+<main class="container pb-3">
 	<div class="row justify-content-center">
 		<div class="col-lg-10">
 			<slot />
 		</div>
 	</div>
 </main>
-
-<!--<footer class="position-fixed bottom-0 bg-body w-100">-->
-<!--	<div class="border-top small">-->
-<!--		<SvelteMarkdown source={contact} />-->
-<!--	</div>-->
-<!--</footer>-->
-
-<style>
-</style>

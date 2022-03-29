@@ -6,7 +6,7 @@
 
 <div class="card">
     <div class="card-body">
-        <SvelteMarkdown source={contact.Langfassung} options={variables.markdownOptions} />
+        <SvelteMarkdown source={contact.Kontakt} options={variables.markdownOptions} />
         <div class="accordion accordion-flush border-top" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">
