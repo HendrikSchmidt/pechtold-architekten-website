@@ -22,6 +22,7 @@
 				{#if project.attributes.Fotos.data}
 					<div class="img-container">
 						<img
+							loading="lazy"
 							class="card-img-bottom"
 							src={project.attributes.Fotos.data[0].attributes.url}
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
@@ -34,16 +35,12 @@
 </div>
 
 <style lang="scss">
-	@import '../../node_modules/bootstrap/scss/_functions';
-	@import '../../node_modules/bootstrap/scss/_variables';
-	@import '../../node_modules/bootstrap/scss/mixins/_breakpoints';
-
-	a {
+a {
 		text-decoration: none;
 	}
 
 	.img-container {
-		height: 15rem;
+		height: calc(100px + 15vw);
 		overflow: hidden;
 
 		.card-img-bottom {
