@@ -9,18 +9,6 @@
   const photos = project.Fotos.data;
 
   title.set(desluggify($page.params.projectSlug));
-  const lightboxImg = {
-    src: "",
-    alt: ""
-  };
-
-  onMount(() => {
-    const myModalEl = document.getElementById("lightboxModal");
-    myModalEl.addEventListener("show.bs.modal", function(event) {
-      lightboxImg.src = event.relatedTarget.getAttribute("data-bs-src");
-      lightboxImg.alt = event.relatedTarget.getAttribute("data-bs-alt");
-    });
-  });
 </script>
 
 <div class="card">
@@ -53,9 +41,7 @@
                 class="d-block w-100"
                 alt={image.attributes.alternativeText}
 								data-bs-toggle="modal"
-								data-bs-target="#lightboxModal"
-								data-bs-src={image.attributes.url}
-								data-bs-alt={image.attributes.alternativeText}
+								data-bs-target="#lightboxModal-{index}"
               />
           </div>
         {/each}
@@ -93,11 +79,13 @@
   </div>
 </div>
 
-<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <img loading="lazy" {...lightboxImg} class="w-100 h-100" />
+{#each photos as image, index}
+  <div class="modal fade" id="lightboxModal-{index}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <img loading="lazy" src={image.attributes.url} alt={image.attributes.alternativeText} class="w-100 h-100" />
+    </div>
   </div>
-</div>
+{/each}
 
 <style lang="scss">
   .carousel-inner {
