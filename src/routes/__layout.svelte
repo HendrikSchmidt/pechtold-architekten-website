@@ -1,5 +1,4 @@
 <script context="module">
-	import SvelteMarkdown from "svelte-markdown";
 	import { variables } from '$lib/variables';
 
 	export async function load({ fetch }) {
@@ -14,12 +13,16 @@
 	}
 </script>
 
-
 <script lang="ts">
 	import Header from '$lib/Header.svelte';
 	import '../app.scss';
+	import { title } from "$lib/utils";
 	export let categoryNames;
 </script>
+
+<svelte:head>
+	<title>{$title}</title>
+</svelte:head>
 
 <Header {categoryNames} />
 

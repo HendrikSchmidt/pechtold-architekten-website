@@ -4,6 +4,9 @@
 
     export let homepage;
     const gallery = homepage.Aufmachergalerie.data;
+
+    import { title } from "$lib/utils";
+    title.clear();
 </script>
 
 <div class="row justify-content-center">

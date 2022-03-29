@@ -2,6 +2,8 @@
     import SvelteMarkdown from 'svelte-markdown';
     import { variables } from "$lib/variables";
     export let contact;
+    import { title } from "$lib/utils";
+    title.set('Kontakt');
 </script>
 
 <div class="card">

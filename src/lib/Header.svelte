@@ -88,7 +88,6 @@
 			font-weight: 300;
 			&.active {
 				background-color: transparent;
-				color: black;
 				border-left: 4px solid #6685a3;
 				border-right: 4px solid #6685a3;
 			}

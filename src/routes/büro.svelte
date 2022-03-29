@@ -2,6 +2,9 @@
     import SvelteMarkdown from 'svelte-markdown';
     import { variables } from "$lib/variables";
     export let office;
+
+    import { title } from "$lib/utils";
+    title.set('Büro');
 </script>
 
 <div class="card">

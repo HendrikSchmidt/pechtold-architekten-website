@@ -3,6 +3,10 @@
     import { variables } from "$lib/variables";
     export let project;
     const photos = project.Fotos.data;
+
+    import { page } from '$app/stores';
+    import { title, desluggify } from "$lib/utils";
+    title.set(desluggify($page.params.projectSlug));
 </script>
 
 <div class="card">
