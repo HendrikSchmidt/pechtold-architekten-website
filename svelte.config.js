@@ -10,6 +10,10 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
+		files: {
+			assets: 'static',
+		},
+
 		paths: {
 			base: dev ? '' : '/pechtold-architekten-website',
 		},
