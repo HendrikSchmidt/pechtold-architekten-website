@@ -24,7 +24,7 @@
 						<img
 							loading="lazy"
 							class="card-img-bottom"
-							src={project.attributes.Fotos.data[0].attributes.url}
+							src={project.attributes.Fotos.data[0].attributes.formats.medium.url}
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
 						/>
 					</div>
