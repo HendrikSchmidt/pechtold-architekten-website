@@ -1,10 +1,11 @@
 <script lang="ts">
-    import ProjectList from "$lib/ProjectList.svelte";
-    export let projects;
+	import ProjectList from '$lib/ProjectList.svelte';
+	import { page } from '$app/stores';
+	import { desluggify, title } from '$lib/utils';
 
-    import { page } from '$app/stores';
-    import { title, desluggify } from "$lib/utils";
-    title.set(desluggify($page.params.categorySlug));
+	export let projects;
+
+	title.set(desluggify($page.params.categorySlug));
 </script>
 
 <ProjectList {projects} />

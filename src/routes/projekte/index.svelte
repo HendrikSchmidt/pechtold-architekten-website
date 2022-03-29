@@ -1,9 +1,10 @@
 <script lang="ts">
-    import ProjectList from "$lib/ProjectList.svelte";
-    export let projects;
+	import ProjectList from '$lib/ProjectList.svelte';
+	import { title } from '$lib/utils';
 
-    import { title } from "$lib/utils";
-    title.set('Projekte');
+	export let projects;
+
+	title.set('Projekte');
 </script>
 
 <ProjectList {projects} />

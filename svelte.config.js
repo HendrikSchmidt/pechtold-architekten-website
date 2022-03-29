@@ -16,8 +16,8 @@ const config = {
 
 		prerender: {
 			default: true,
-		}
-	}
+		},
+	},
 };
 
 export default config;
