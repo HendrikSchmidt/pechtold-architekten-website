@@ -80,7 +80,7 @@
 </div>
 
 {#each photos as image, index}
-  <div class="modal fade" id="lightboxModal-{index}" tabindex="-1" aria-hidden="true">
+  <div class="modal" id="lightboxModal-{index}" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <button type="button" class="btn-close btn-close-white position-absolute end-0 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
       <img loading="lazy" src={image.attributes.url} alt={image.attributes.alternativeText} class="w-100 h-100" />
