@@ -13,11 +13,13 @@
 
 <div class="card">
   <div class="card-body">
+    <p class="card-text">
+      <small class="text-muted">{project.Dauer}</small>
+    </p>
     <h2 class="card-title">{project.Titel}</h2>
     <p class="card-text">
       <SvelteMarkdown source={project.Adresse} options={variables.markdownOptions} />
     </p>
-    <p class="card-text"><small class="text-muted">{project.Dauer}</small></p>
   </div>
   {#if photos.length > 1}
     <div id="projectPhotos" class="carousel slide card-img-top" data-bs-ride="carousel">
