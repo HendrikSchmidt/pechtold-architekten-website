@@ -22,7 +22,7 @@
 						 href="{base}/projekt/{sluggify(project.attributes.Titel)}">
 						<img
 							loading={index === 0 ? 'eager' : 'lazy'}
-							src={project.attributes.Fotos.data[0].attributes.large.url}
+							src={project.attributes.Fotos.data[0].attributes.formats.large.url}
 							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
 											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w,
 											{project.attributes.Fotos.data[0].attributes.formats.large.url} 1000w,
