@@ -6,7 +6,7 @@
 </script>
 
 <div class="row">
-	{#each projects as project}
+	{#each projects as project, index}
 		<a
 			class="col-lg-6 text-dark"
 			sveltekit:prefetch
@@ -16,7 +16,7 @@
 				{#if project.attributes.Fotos.data}
 					<div class="img-container">
 						<img
-							loading="lazy"
+							loading={index < 2 ? 'eager' : 'lazy'}
 							class="card-img-top"
 							src={project.attributes.Fotos.data[0].attributes.formats.medium.url}
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}

@@ -21,7 +21,7 @@
 						 sveltekit:prefetch
 						 href="{base}/projekt/{sluggify(project.attributes.Titel)}">
 						<img
-							loading="lazy"
+							loading={index === 0 ? 'eager' : 'lazy'}
 							src={project.attributes.Fotos.data[0].attributes.formats.large.url}
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
 						/>

@@ -38,7 +38,7 @@
         {#each photos as image, index}
           <div class="carousel-item" class:active={index === 0}>
               <img
-								loading="lazy"
+                loading={index === 0 ? 'eager' : 'lazy'}
                 src={image.attributes.formats.large.url}
                 class="d-block w-100"
                 alt={image.attributes.alternativeText}
