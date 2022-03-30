@@ -13,7 +13,7 @@
 
 <div class="row justify-content-center">
 	<div class="col">
-		<div id="homepagePhotos" class="carousel slide card-img-top py-1 overflow-hidden" data-bs-ride="carousel">
+		<div id="homepagePhotos" class="carousel slide overflow-hidden" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				{#each projects as project, index}
 					<a class="carousel-item"
@@ -49,7 +49,7 @@
 		</div>
 
 		<div class="card mt-3">
-			<div class="card-body text-center small">
+			<div class="card-body p-2 text-center small">
 				<SvelteMarkdown source={contact} options={variables.markdownOptions} />
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 <style lang="scss">
 	.carousel-item {
 		width: 100%;
-		height: calc(100vh - 320px);
+		height: calc(100vh - 300px);
 
 		img {
 			width: 100%;

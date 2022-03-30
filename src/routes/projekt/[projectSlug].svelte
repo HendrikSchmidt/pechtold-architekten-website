@@ -22,7 +22,7 @@
     </p>
   </div>
   {#if photos.length > 1}
-    <div id="projectPhotos" class="carousel slide card-img-top" data-bs-ride="carousel">
+    <div id="projectPhotos" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         {#each photos as image, index}
           <button

@@ -90,13 +90,13 @@
 		line-height: 1;
 
 		:first-child {
-			font-size: calc(1.5rem + 1.5vw);
+			font-size: 2.75rem;
 			font-weight: 600;
 			color: #6685a3;
 			letter-spacing: 0.05em;
 		}
 
-		font-size: calc(1.2rem + 1.2vw);
+		font-size: 2.2rem;
 		font-weight: 400;
 		letter-spacing: 0.02em;
 		color: #666;

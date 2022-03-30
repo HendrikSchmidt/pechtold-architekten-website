@@ -27,6 +27,6 @@
 
 <Header {categoryNames} />
 
-<main class="container pb-3">
+<main class="container pb-2">
 	<slot />
 </main>
