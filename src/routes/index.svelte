@@ -11,8 +11,8 @@
 	title.clear();
 </script>
 
-<div class="row justify-content-center">
-	<div class="col">
+<div class="row h-100 flex-column justify-content-center align-items-center">
+	<div class="col d-flex flex-column justify-content-center">
 		<div id="homepagePhotos" class="carousel slide overflow-hidden" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				{#each projects as project, index}
@@ -47,7 +47,8 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-
+	</div>
+	<div class="col flex-grow-0">
 		<div class="card mt-3">
 			<div class="card-body p-2 text-center small">
 				<SvelteMarkdown source={contact} options={variables.markdownOptions} />
@@ -57,15 +58,29 @@
 </div>
 
 <style lang="scss">
+	@import "../../node_modules/bootstrap/scss/functions";
+	@import "../../node_modules/bootstrap/scss/variables";
+	@import "../../node_modules/bootstrap/scss/mixins";
+
+	.row {
+		min-height: calc(100vh - 180px);
+	}
+
 	.carousel-item {
 		width: 100%;
-		height: calc(100vh - 300px);
+		aspect-ratio: 1;
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			object-position: center center;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		.carousel-item {
+			aspect-ratio: 3 / 2;
 		}
 	}
 
