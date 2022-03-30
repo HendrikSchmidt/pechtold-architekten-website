@@ -40,6 +40,14 @@
               <img
                 loading={index === 0 ? 'eager' : 'lazy'}
                 src={image.attributes.formats.large.url}
+                srcset="{image.attributes.formats.small.url} 500w,
+											{image.attributes.formats.medium.url} 750w,
+											{image.attributes.formats.large.url} 1000w,
+											{image.attributes.formats.xlarge.url} 1500w"
+                sizes="(max-width: 500px) 500px,
+											(max-width: 991px) 750px,
+											(max-width: 1200px) 1000px,
+          						1500px"
                 class="d-block w-100"
                 alt={image.attributes.alternativeText}
 								data-bs-toggle="modal"

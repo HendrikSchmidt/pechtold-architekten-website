@@ -22,7 +22,15 @@
 						 href="{base}/projekt/{sluggify(project.attributes.Titel)}">
 						<img
 							loading={index === 0 ? 'eager' : 'lazy'}
-							src={project.attributes.Fotos.data[0].attributes.formats.large.url}
+							src={project.attributes.Fotos.data[0].attributes.large.url}
+							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
+											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w,
+											{project.attributes.Fotos.data[0].attributes.formats.large.url} 1000w,
+											{project.attributes.Fotos.data[0].attributes.formats.xlarge.url} 1500w"
+							sizes="(max-width: 300px) 500px,
+											(max-width: 991px) 750px,
+											(max-width: 1200px) 1000px,
+          						1500px"
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
 						/>
 					</a>

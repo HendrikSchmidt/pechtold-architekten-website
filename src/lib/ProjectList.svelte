@@ -19,6 +19,10 @@
 							loading={index < 2 ? 'eager' : 'lazy'}
 							class="card-img-top"
 							src={project.attributes.Fotos.data[0].attributes.formats.medium.url}
+							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
+											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w"
+							sizes="(max-width: 500px) 500px,
+											750px"
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
 						/>
 					</div>
