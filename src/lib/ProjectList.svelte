@@ -39,24 +39,34 @@
 </div>
 
 <style lang="scss">
+	@import "../../node_modules/bootstrap/scss/functions";
+	@import "../../node_modules/bootstrap/scss/variables";
+	@import "../../node_modules/bootstrap/scss/mixins";
+
 	a {
 		text-decoration: none;
+
+		.card-body {
+			background-color: rgba(50, 50, 50, 0.7);
+		}
+
+		.img-container {
+			aspect-ratio: 3 / 2;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-position: center center;
+				object-fit: cover;
+				border-radius: 0;
+			}
+		}
 	}
 
-	.card-body {
-		background-color: rgba(50,50,50,0.7);
-	}
-
-	.img-container {
-		aspect-ratio: 3 / 2;
-		overflow: hidden;
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-position: center center;
-			object-fit: cover;
-			border-radius: 0;
+	@include media-breakpoint-up(lg) {
+		.card-body {
+			height: 104px;
 		}
 	}
 </style>
