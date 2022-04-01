@@ -8,7 +8,7 @@
 <div class="row">
 	{#each projects as project, index}
 		<a
-			class="col-lg-6 text-dark"
+			class="text-dark"
 			sveltekit:prefetch
 			href="{base}/projekt/{sluggify(project.attributes.Titel)}"
 		>
@@ -20,9 +20,13 @@
 							class="card-img-top"
 							src={project.attributes.Fotos.data[0].attributes.formats.medium.url}
 							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
-											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w"
+											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w,
+											{project.attributes.Fotos.data[0].attributes.formats.large.url} 1000w,
+											{project.attributes.Fotos.data[0].attributes.formats.xlarge.url} 1500w"
 							sizes="(max-width: 500px) 500px,
-											750px"
+											(max-width: 991px) 750px,
+											(max-width: 1200px) 1000px,
+          						1500px"
 							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
 						/>
 					</div>
@@ -39,10 +43,6 @@
 </div>
 
 <style lang="scss">
-	@import "../../node_modules/bootstrap/scss/functions";
-	@import "../../node_modules/bootstrap/scss/variables";
-	@import "../../node_modules/bootstrap/scss/mixins";
-
 	a {
 		text-decoration: none;
 
@@ -61,12 +61,6 @@
 				object-fit: cover;
 				border-radius: 0;
 			}
-		}
-	}
-
-	@include media-breakpoint-up(lg) {
-		.card-body {
-			height: 104px;
 		}
 	}
 </style>
