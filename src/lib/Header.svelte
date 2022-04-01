@@ -103,6 +103,7 @@
 	}
 
 	.menu-bar {
+		background-color: aliceblue;
 		ul {
 			border-top: 1px solid #6685a3;
 			border-bottom: 1px solid #6685a3;
@@ -119,7 +120,6 @@
 
 		.nav-item > a {
 			color: #6685a3;
-			font-weight: 300;
 			padding: 0.25rem 1rem 0.5rem;
 			border-top: 4px solid transparent;
 
@@ -134,7 +134,6 @@
 
 		.dropdown-item {
 			color: #6685a3;
-			font-weight: 300;
 
 			&.active {
 				background-color: transparent;
