@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-074805d7.js",
+    "file": "start-859e2285.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -59,25 +59,25 @@
     ]
   },
   "src/routes/projekte/index.svelte": {
-    "file": "pages/projekte/index.svelte-6ddbd225.js",
+    "file": "pages/projekte/index.svelte-2f0929d0.js",
     "src": "src/routes/projekte/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-c8343447.js",
-      "_ProjectList-7eb469ae.js",
+      "_ProjectList-4158b4c3.js",
       "_utils-a8ea6870.js",
       "_paths-396f020f.js"
     ]
   },
   "src/routes/projekte/[categorySlug].svelte": {
-    "file": "pages/projekte/_categorySlug_.svelte-ecfa6234.js",
+    "file": "pages/projekte/_categorySlug_.svelte-10a0e0db.js",
     "src": "src/routes/projekte/[categorySlug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-c8343447.js",
-      "_ProjectList-7eb469ae.js",
+      "_ProjectList-4158b4c3.js",
       "_stores-753699b4.js",
       "_utils-a8ea6870.js",
       "_paths-396f020f.js"
@@ -98,7 +98,7 @@
     ]
   },
   "src/routes/projekt/[projectSlug].svelte": {
-    "file": "pages/projekt/_projectSlug_.svelte-09a5ec6d.js",
+    "file": "pages/projekt/_projectSlug_.svelte-45f9fa4e.js",
     "src": "src/routes/projekt/[projectSlug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -109,7 +109,7 @@
       "_utils-a8ea6870.js"
     ],
     "css": [
-      "assets/pages/projekt/_projectSlug_.svelte-e1e9d068.css"
+      "assets/pages/projekt/_projectSlug_.svelte-3f52e2b5.css"
     ]
   },
   "src/routes/büro.svelte": {
@@ -147,15 +147,15 @@
       "_vendor-c8343447.js"
     ]
   },
-  "_ProjectList-7eb469ae.js": {
-    "file": "chunks/ProjectList-7eb469ae.js",
+  "_ProjectList-4158b4c3.js": {
+    "file": "chunks/ProjectList-4158b4c3.js",
     "imports": [
       "_vendor-c8343447.js",
       "_paths-396f020f.js",
       "_utils-a8ea6870.js"
     ],
     "css": [
-      "assets/ProjectList-40db4085.css"
+      "assets/ProjectList-ebde2949.css"
     ]
   }
 }
