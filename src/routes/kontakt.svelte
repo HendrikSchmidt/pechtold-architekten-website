@@ -10,12 +10,14 @@
 
 <div class="card">
 	<div class="card-body">
-		<SvelteMarkdown source={contact.Kontakt} options={variables.markdownOptions} />
+		<div class=" px-3">
+			<SvelteMarkdown source={contact.Kontakt} options={variables.markdownOptions} />
+		</div>
 		<div class="accordion accordion-flush border-top" id="accordionPanelsStayOpenExample">
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="panelsStayOpen-headingOne">
 					<button
-						class="accordion-button collapsed"
+						class="accordion-button collapsed px-3"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#panelsStayOpen-collapseOne"
@@ -38,7 +40,7 @@
 			<div class="accordion-item">
 				<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
 					<button
-						class="accordion-button collapsed"
+						class="accordion-button collapsed px-3"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#panelsStayOpen-collapseTwo"

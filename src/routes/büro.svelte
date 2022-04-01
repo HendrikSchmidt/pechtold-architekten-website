@@ -10,6 +10,8 @@
 
 <div class="card">
 	<div class="card-body">
-		<SvelteMarkdown source={office.Profil} options={variables.markdownOptions} />
+		<div class="px-3">
+			<SvelteMarkdown source={office.Profil} options={variables.markdownOptions} />
+		</div>
 	</div>
 </div>
