@@ -51,7 +51,9 @@
         data-bs-target="#projectPhotos"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="control-container">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
@@ -60,7 +62,9 @@
         data-bs-target="#projectPhotos"
         data-bs-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="control-container">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
@@ -100,6 +104,14 @@
         object-fit: contain;
         cursor: zoom-in;
       }
+    }
+  }
+
+  .control-container {
+    background-color: aliceblue;
+    line-height: 0;
+    span {
+      margin: 5px;
     }
   }
 
