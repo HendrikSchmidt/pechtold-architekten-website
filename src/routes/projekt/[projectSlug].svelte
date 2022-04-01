@@ -22,18 +22,7 @@
     </p>
   </div>
   {#if photos.length > 1}
-    <div id="projectPhotos" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        {#each photos as image, index}
-          <button
-            class:active={index === 0}
-            type="button"
-            data-bs-target="#projectPhotos"
-            data-bs-slide-to={index}
-            aria-current={index === 0}
-            aria-label="Slide {index + 1}"></button>
-        {/each}
-      </div>
+    <div id="projectPhotos" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         {#each photos as image, index}
           <div class="carousel-item" class:active={index === 0}>
@@ -100,7 +89,6 @@
 
 <style lang="scss">
   .carousel-inner {
-    background-color: #6685a3;
     aspect-ratio: 3 / 2;
 
     .carousel-item {
