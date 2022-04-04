@@ -3,12 +3,21 @@
   import { variables } from "$lib/variables";
   import { page } from "$app/stores";
   import { desluggify, title } from "$lib/utils";
-  import { onMount } from "svelte";
 
   export let project;
   const photos = project.Fotos.data;
 
   title.set(desluggify($page.params.projectSlug));
+
+  let showLightbox = false;
+  const openLightbox = (url, text) => {
+    showLightbox = true;
+    const lightbox = document.getElementById('lightbox');
+    const modalImg = lightbox.querySelector('img');
+    modalImg.src = url;
+    modalImg.alt = text;
+  };
+  const hideLightbox = () => {showLightbox = false;};
 </script>
 
 <div class="card">
@@ -39,8 +48,7 @@
           						1500px"
                 class="d-block w-100"
                 alt={image.attributes.alternativeText}
-								data-bs-toggle="modal"
-								data-bs-target="#lightboxModal-{index}"
+                on:click={() => openLightbox(image.attributes.url, image.attributes.alternativeText)}
               />
           </div>
         {/each}
@@ -82,14 +90,12 @@
   </div>
 </div>
 
-{#each photos as image, index}
-  <div class="modal" id="lightboxModal-{index}" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <button type="button" class="btn-close btn-close-white position-absolute end-0 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
-      <img loading="lazy" src={image.attributes.url} alt={image.attributes.alternativeText} class="w-100 h-100" />
-    </div>
+<div class="modal show" id="lightbox" tabindex="-1" hidden={!showLightbox} aria-hidden={!showLightbox} on:click={hideLightbox}>
+  <div class="modal-dialog modal-fullscreen">
+    <button type="button" class="btn-close btn-close-white position-absolute end-0 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
+    <img loading="lazy" class="w-100 h-100" />
   </div>
-{/each}
+</div>
 
 <style lang="scss">
   .carousel-inner {
@@ -124,8 +130,9 @@
   }
 
   .modal {
+    display: block;
     cursor: zoom-out;
-    background-color: #11111111;
+    background-color: rgba(0,0,0,0.5);
 
     img {
       object-fit: contain;
