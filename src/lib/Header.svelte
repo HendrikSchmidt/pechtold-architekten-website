@@ -118,17 +118,22 @@
 			}
 		}
 
-		.nav-item > a {
-			color: #6685a3;
-			padding: 0.25rem 1rem 0.5rem;
-			border-top: 4px solid transparent;
+		.nav-item {
+			width: 105px;
+			text-align: center;
 
-			&:hover {
-				background-color: aliceblue;
-			}
+			& > a {
+				color: #6685a3;
+				padding: 0.25rem 1rem 0.5rem;
+				border-top: 4px solid transparent;
 
-			&.active {
-				border-color: #6685a3;
+				&:hover {
+					background-color: aliceblue;
+				}
+
+				&.active {
+					border-color: #6685a3;
+				}
 			}
 		}
 
