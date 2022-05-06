@@ -6,7 +6,7 @@ export async function get({ params }) {
 	const response = await fetch(
 		`${variables.apiPath}/kategorien/${
 			slugsToIds[sluggify(params.categorySlug)]
-		}?populate[Projekte][populate][0]=Fotos`
+		}?populate[Projekte][populate][0]=Fotos&pagination[pageSize]=100`
 	);
 	const category = await response.json();
 

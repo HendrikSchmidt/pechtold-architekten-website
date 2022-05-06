@@ -6,7 +6,7 @@ const apiPath = dev
 	: 'https://pechtold-architekten-cms.herokuapp.com/api';
 
 const getSlugsToIdsMapping = async (route, fieldToGetSlugFrom) => {
-	const response = await fetch(`${apiPath}/${route}`);
+	const response = await fetch(`${apiPath}/${route}?pagination[pageSize]=100`);
 	const collection = await response.json();
 	const slugsToIds = {};
 	collection.data.forEach(
