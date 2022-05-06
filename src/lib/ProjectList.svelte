@@ -47,7 +47,7 @@
 			aspect-ratio: 3 / 2;
 			overflow: hidden;
 
-			img {
+			:global(img) {
 				width: 100%;
 				height: 100%;
 				object-position: center center;
