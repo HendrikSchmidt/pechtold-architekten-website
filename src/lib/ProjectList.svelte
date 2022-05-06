@@ -15,20 +15,6 @@
 			<div class="card mb-3">
 				{#if project.attributes.Fotos.data}
 					<div class="img-container">
-						<img
-							loading={index < 2 ? 'eager' : 'lazy'}
-							class="card-img-top"
-							src={project.attributes.Fotos.data[0].attributes.formats.medium.url}
-							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
-											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w,
-											{project.attributes.Fotos.data[0].attributes.formats.large ? project.attributes.Fotos.data[0].attributes.formats.large.url + ' 1000w,' : ''}
-											{project.attributes.Fotos.data[0].attributes.formats.xlarge ? project.attributes.Fotos.data[0].attributes.formats.xlarge.url + ' 1500w' : ''}"
-							sizes="(max-width: 500px) 500px,
-											(max-width: 991px) 750px,
-											(max-width: 1200px) 1000px,
-          						1500px"
-							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
-						/>
 					</div>
 				{/if}
 				<div class="card-body position-absolute bottom-0 text-white p-3 w-100">
