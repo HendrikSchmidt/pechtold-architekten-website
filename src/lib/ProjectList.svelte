@@ -21,8 +21,8 @@
 							src={project.attributes.Fotos.data[0].attributes.formats.medium.url}
 							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
 											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w,
-											{project.attributes.Fotos.data[0].attributes.formats.large.url} 1000w,
-											{project.attributes.Fotos.data[0].attributes.formats.xlarge.url} 1500w"
+											{project.attributes.Fotos.data[0].attributes.formats.large ? project.attributes.Fotos.data[0].attributes.formats.large.url + ' 1000w,' : ''}
+											{project.attributes.Fotos.data[0].attributes.formats.xlarge ? project.attributes.Fotos.data[0].attributes.formats.xlarge.url + ' 1500w' : ''}"
 							sizes="(max-width: 500px) 500px,
 											(max-width: 991px) 750px,
 											(max-width: 1200px) 1000px,
