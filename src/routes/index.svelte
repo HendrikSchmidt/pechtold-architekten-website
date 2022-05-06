@@ -4,6 +4,7 @@
 	import { title } from '$lib/utils';
 	import { base } from '$app/paths';
 	import { sluggify } from '$lib/utils';
+	import Image from '$lib/Image.svelte';
 
 	export let contact;
 	export let projects;
@@ -20,18 +21,11 @@
 						 class:active={index === 0}
 						 sveltekit:prefetch
 						 href="{base}/projekt/{sluggify(project.attributes.Titel)}">
-						<img
-							loading={index === 0 ? 'eager' : 'lazy'}
-							src={project.attributes.Fotos.data[0].attributes.formats.large.url}
-							srcset="{project.attributes.Fotos.data[0].attributes.formats.small.url} 500w,
-											{project.attributes.Fotos.data[0].attributes.formats.medium.url} 750w,
-											{project.attributes.Fotos.data[0].attributes.formats.large.url} 1000w,
-											{project.attributes.Fotos.data[0].attributes.formats.xlarge.url} 1500w"
-							sizes="(max-width: 300px) 500px,
-											(max-width: 991px) 750px,
-											(max-width: 1200px) 1000px,
-          						1500px"
-							alt={project.attributes.Fotos.data[0].attributes.alternativeText}
+						 <Image
+						 	lazy={index !== 0}
+							img={project.attributes.Fotos.data[0].attributes}
+							src="large"
+							sizes="(max-width: 300px) 500px, (max-width: 991px) 750px, (max-width: 1200px) 1000px, 1500px"
 						/>
 					</a>
 				{/each}
@@ -78,7 +72,7 @@
 		width: 100%;
 		aspect-ratio: 1;
 
-		img {
+		:global(img) {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;

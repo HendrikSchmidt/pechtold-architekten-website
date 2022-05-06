@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 	import { sluggify } from '$lib/utils';
+	import Image from '$lib/Image.svelte';
 
 	export let projects;
 </script>
@@ -15,6 +16,12 @@
 			<div class="card mb-3">
 				{#if project.attributes.Fotos.data}
 					<div class="img-container">
+						<Image
+							lazy={index > 1}
+							img={project.attributes.Fotos.data[0].attributes}
+							src="medium"
+							sizes="(max-width: 500px) 500px, (max-width: 991px) 750px, (max-width: 1200px) 1000px, 1500px"
+						/>
 					</div>
 				{/if}
 				<div class="card-body position-absolute bottom-0 text-white p-3 w-100">

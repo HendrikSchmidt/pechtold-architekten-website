@@ -3,6 +3,7 @@
   import { variables } from "$lib/variables";
   import { page } from "$app/stores";
   import { desluggify, title } from "$lib/utils";
+  import Image from "$lib/Image.svelte";
 
   export let project;
   const photos = project.Fotos.data;
@@ -35,20 +36,13 @@
       <div class="carousel-inner">
         {#each photos as image, index}
           <div class="carousel-item" class:active={index === 0}>
-              <img
-                loading={index === 0 ? 'eager' : 'lazy'}
-                src={image.attributes.formats.large.url}
-                srcset="{image.attributes.formats.small.url} 500w,
-											{image.attributes.formats.medium.url} 750w,
-											{image.attributes.formats.large.url} 1000w,
-											{image.attributes.formats.xlarge.url} 1500w"
-                sizes="(max-width: 500px) 500px,
-											(max-width: 991px) 750px,
-											(max-width: 1200px) 1000px,
-          						1500px"
-                class="d-block w-100"
-                alt={image.attributes.alternativeText}
-                on:click={() => openLightbox(image.attributes.url, image.attributes.alternativeText)}
+            <Image
+              lazy={index !== 0}
+              img={image.attributes}
+              src="large"
+              sizes="(max-width: 500px) 500px, (max-width: 991px) 750px, (max-width: 1200px) 1000px, 1500px"
+              classString="d-block w-100"
+              on:click={() => openLightbox(image.attributes.url, image.attributes.alternativeText)}
               />
           </div>
         {/each}
@@ -104,7 +98,7 @@
     .carousel-item {
       height: 100%;
 
-      img {
+      :global(img) {
         min-width: 100%;
         height: 100%;
         object-fit: contain;
