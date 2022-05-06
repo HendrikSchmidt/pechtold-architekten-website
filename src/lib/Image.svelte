@@ -10,7 +10,7 @@
 <img
     class={classString}
     loading={lazy ? 'lazy' : 'eager'}
-    src={formats[src].url ? formats[src].url : formats.small.url}
+    src={formats[src] ? formats[src].url : formats.small.url}
     srcset="{formats.small.url} 500w,
                     {formats.large ? formats.medium.url + ' 750w,' : ''}
                     {formats.large ? formats.large.url + ' 1000w,' : ''}
