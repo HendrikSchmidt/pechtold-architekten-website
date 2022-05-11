@@ -1,0 +1,1 @@
+import{D as c}from"./vendor-a1d99b99.js";function l(){const{subscribe:e,set:t}=c("");return{subscribe:e,set:s=>{t(`${s} \u2022 Pechtold Architekten`)},clear:()=>{t("Pechtold Architekten")}}}const i=l(),o=e=>e.replaceAll(" ","_"),a=e=>e.replaceAll("_"," ");export{a as d,o as s,i as t};
