@@ -5,6 +5,7 @@
     export let sizes;
     export let classString = "";
     let { formats } = img;
+    console.log(formats);
 </script>
 
 <img
