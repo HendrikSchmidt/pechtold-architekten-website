@@ -1,5 +1,5 @@
 <script>
-    export let lazy;
+    export let lazy = false;
     export let img;
     export let src;
     export let sizes;
