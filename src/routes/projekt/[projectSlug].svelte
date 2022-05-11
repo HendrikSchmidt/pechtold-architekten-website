@@ -87,7 +87,7 @@
 <div class="modal show" id="lightbox" tabindex="-1" hidden={!showLightbox} aria-hidden={!showLightbox} on:click={hideLightbox}>
   <div class="modal-dialog modal-fullscreen">
     <button type="button" class="btn-close btn-close-white position-absolute end-0 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
-    <img loading="lazy" class="w-100 h-100" />
+    <img loading="lazy" class="w-100 h-100" alt="PLACEHOLDER"/>
   </div>
 </div>
 
