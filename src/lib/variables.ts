@@ -12,6 +12,7 @@ const getSlugsToIdsMapping = async (route, fieldToGetSlugFrom) => {
 	collection.data.forEach(
 		(object) => (slugsToIds[sluggify(object.attributes[fieldToGetSlugFrom])] = object.id)
 	);
+	console.log(slugsToIds);
 	return slugsToIds;
 };
 
