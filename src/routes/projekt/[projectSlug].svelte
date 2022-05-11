@@ -10,15 +10,15 @@
 
   title.set(desluggify($page.params.projectSlug));
 
-  let showLightbox = false;
-  const openLightbox = (url, text) => {
-    showLightbox = true;
-    const lightbox = document.getElementById('lightbox');
-    const modalImg = lightbox.querySelector('img');
-    modalImg.src = url;
-    modalImg.alt = text;
-  };
-  const hideLightbox = () => {showLightbox = false;};
+  // let showLightbox = false;
+  // const openLightbox = (url, text) => {
+  //   showLightbox = true;
+  //   const lightbox = document.getElementById('lightbox');
+  //   const modalImg = lightbox.querySelector('img');
+  //   modalImg.src = url;
+  //   modalImg.alt = text;
+  // };
+  // const hideLightbox = () => {showLightbox = false;};
 </script>
 
 <div class="card">
@@ -36,14 +36,14 @@
       <div class="carousel-inner">
         {#each photos as image, index}
           <div class="carousel-item" class:active={index === 0}>
-            <Image
+            <!-- <Image
               lazy={index !== 0}
               img={image.attributes}
               src="large"
               sizes="(max-width: 500px) 500px, (max-width: 991px) 750px, (max-width: 1200px) 1000px, 1500px"
               classString="d-block w-100"
               on:click={() => openLightbox(image.attributes.url, image.attributes.alternativeText)}
-              />
+              /> -->
           </div>
         {/each}
       </div>
@@ -71,11 +71,11 @@
       </button>
     </div>
   {:else if photos.length === 1}
-    <img
+    <!-- <img
       src={photos[0].attributes.url}
       class="d-block"
       alt={photos[0].attributes.alternativeText}
-    />
+    /> -->
   {/if}
   <div class="card-body">
     <p class="card-text">
@@ -84,12 +84,12 @@
   </div>
 </div>
 
-<div class="modal show" id="lightbox" tabindex="-1" hidden={!showLightbox} aria-hidden={!showLightbox} on:click={hideLightbox}>
+<!-- <div class="modal show" id="lightbox" tabindex="-1" hidden={!showLightbox} aria-hidden={!showLightbox} on:click={hideLightbox}>
   <div class="modal-dialog modal-fullscreen">
     <button type="button" class="btn-close btn-close-white position-absolute end-0 p-2" data-bs-dismiss="modal" aria-label="Close"></button>
     <img loading="lazy" class="w-100 h-100" alt="PLACEHOLDER"/>
   </div>
-</div>
+</div> -->
 
 <style lang="scss">
   .carousel-inner {
