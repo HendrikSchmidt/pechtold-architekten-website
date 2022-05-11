@@ -34,7 +34,7 @@
   {#if photos.length > 1}
     <div id="projectPhotos" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        {#each photos as image, index}
+        {#each photos as image, index (image.attributes.url)}
           <div class="carousel-item" class:active={index === 0}>
             <Image
               lazy={index !== 0}

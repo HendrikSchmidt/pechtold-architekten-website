@@ -16,7 +16,7 @@
 	<div class="col d-flex flex-column justify-content-center">
 		<div id="homepagePhotos" class="carousel slide overflow-hidden" data-bs-ride="carousel">
 			<div class="carousel-inner">
-				{#each projects as project, index}
+				{#each projects as project, index (project.attributes.Titel)}
 					<a class="carousel-item"
 						 class:active={index === 0}
 						 sveltekit:prefetch

@@ -7,7 +7,7 @@
 </script>
 
 <div class="row">
-	{#each projects as project, index}
+	{#each projects as project, index (project.attributes.Titel)}
 		<a
 			class="text-dark"
 			sveltekit:prefetch
