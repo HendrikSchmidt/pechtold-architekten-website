@@ -21,4 +21,5 @@
     {srcset}
     {sizes}
     alt={img.alternativeText}
+    on:click
 />
