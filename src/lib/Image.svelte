@@ -6,16 +6,14 @@
     export let classString = "";
     let { formats } = img;
     console.log(formats);
+    console.log(formats[src].url);
+    console.log(formats.small.url);
 </script>
 
 <img
     class={classString}
     loading={lazy ? 'lazy' : 'eager'}
     src={formats[src] ? formats[src].url : formats.small.url}
-    srcset="{formats.small.url} 500w,
-                    {formats.large ? formats.medium.url + ' 750w,' : ''}
-                    {formats.large ? formats.large.url + ' 1000w,' : ''}
-                    {formats.xlarge ? formats.xlarge.url + ' 1500w' : ''}"
     {sizes}
     alt={img.alternativeText}
 />
