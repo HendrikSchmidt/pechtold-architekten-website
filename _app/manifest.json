@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-4366cb86.js",
+    "file": "start-a84976b7.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
+      "_vendor-6802d557.js",
       "_paths-396f020f.js"
     ],
     "dynamicImports": [
@@ -19,143 +19,153 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-b52fd94b.js",
+    "file": "pages/__layout.svelte-e5154ede.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_variables-ff88740e.js",
-      "_stores-6c989948.js",
+      "_vendor-6802d557.js",
+      "_variables-f93a90e3.js",
+      "_stores-1a6ebe76.js",
       "_paths-396f020f.js",
-      "_utils-699e7247.js"
+      "_utils-b6745002.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-e39688e9.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-428c2f3d.js",
+    "file": "error.svelte-2dd4eb7c.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js"
+      "_vendor-6802d557.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-fe623747.js",
+    "file": "pages/index.svelte-af59f18c.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_variables-ff88740e.js",
-      "_utils-699e7247.js",
-      "_paths-396f020f.js"
+      "_vendor-6802d557.js",
+      "_variables-f93a90e3.js",
+      "_utils-b6745002.js",
+      "_paths-396f020f.js",
+      "_Image-caa30891.js"
     ],
     "css": [
-      "assets/pages/index.svelte-7b958e37.css"
+      "assets/pages/index.svelte-74309eef.css"
     ]
   },
   "src/routes/projekte/index.svelte": {
-    "file": "pages/projekte/index.svelte-b9aa970d.js",
+    "file": "pages/projekte/index.svelte-58a6ee10.js",
     "src": "src/routes/projekte/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_ProjectList-55b97414.js",
-      "_utils-699e7247.js",
-      "_paths-396f020f.js"
+      "_vendor-6802d557.js",
+      "_ProjectList-a24c04df.js",
+      "_utils-b6745002.js",
+      "_paths-396f020f.js",
+      "_Image-caa30891.js"
     ]
   },
   "src/routes/projekte/[categorySlug].svelte": {
-    "file": "pages/projekte/_categorySlug_.svelte-3868758c.js",
+    "file": "pages/projekte/_categorySlug_.svelte-6cc5204a.js",
     "src": "src/routes/projekte/[categorySlug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_ProjectList-55b97414.js",
-      "_stores-6c989948.js",
-      "_utils-699e7247.js",
-      "_paths-396f020f.js"
+      "_vendor-6802d557.js",
+      "_ProjectList-a24c04df.js",
+      "_stores-1a6ebe76.js",
+      "_utils-b6745002.js",
+      "_paths-396f020f.js",
+      "_Image-caa30891.js"
     ]
   },
   "src/routes/kontakt.svelte": {
-    "file": "pages/kontakt.svelte-dd5f1921.js",
+    "file": "pages/kontakt.svelte-1b574ff0.js",
     "src": "src/routes/kontakt.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_variables-ff88740e.js",
-      "_utils-699e7247.js"
+      "_vendor-6802d557.js",
+      "_variables-f93a90e3.js",
+      "_utils-b6745002.js"
     ],
     "css": [
       "assets/pages/kontakt.svelte-2ddbd02e.css"
     ]
   },
   "src/routes/projekt/[projectSlug].svelte": {
-    "file": "pages/projekt/_projectSlug_.svelte-26e67a7d.js",
+    "file": "pages/projekt/_projectSlug_.svelte-e093c283.js",
     "src": "src/routes/projekt/[projectSlug].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_variables-ff88740e.js",
-      "_stores-6c989948.js",
-      "_utils-699e7247.js"
+      "_vendor-6802d557.js",
+      "_variables-f93a90e3.js",
+      "_stores-1a6ebe76.js",
+      "_utils-b6745002.js"
     ],
     "css": [
-      "assets/pages/projekt/_projectSlug_.svelte-97d0270f.css"
+      "assets/pages/projekt/_projectSlug_.svelte-b980ad96.css"
     ]
   },
   "src/routes/büro.svelte": {
-    "file": "pages/büro.svelte-b13baea9.js",
+    "file": "pages/büro.svelte-8608a9e1.js",
     "src": "src/routes/büro.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-7059e03e.js",
-      "_variables-ff88740e.js",
-      "_utils-699e7247.js"
+      "_vendor-6802d557.js",
+      "_variables-f93a90e3.js",
+      "_utils-b6745002.js"
     ]
   },
-  "_vendor-7059e03e.js": {
-    "file": "chunks/vendor-7059e03e.js"
+  "_vendor-6802d557.js": {
+    "file": "chunks/vendor-6802d557.js"
   },
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
   },
-  "_variables-ff88740e.js": {
-    "file": "chunks/variables-ff88740e.js",
+  "_variables-f93a90e3.js": {
+    "file": "chunks/variables-f93a90e3.js",
     "imports": [
-      "_utils-699e7247.js"
+      "_utils-b6745002.js"
     ]
   },
-  "_utils-699e7247.js": {
-    "file": "chunks/utils-699e7247.js",
+  "_utils-b6745002.js": {
+    "file": "chunks/utils-b6745002.js",
     "imports": [
-      "_vendor-7059e03e.js"
+      "_vendor-6802d557.js"
     ]
   },
-  "_stores-6c989948.js": {
-    "file": "chunks/stores-6c989948.js",
+  "_stores-1a6ebe76.js": {
+    "file": "chunks/stores-1a6ebe76.js",
     "imports": [
-      "_vendor-7059e03e.js"
+      "_vendor-6802d557.js"
     ]
   },
-  "_ProjectList-55b97414.js": {
-    "file": "chunks/ProjectList-55b97414.js",
+  "_Image-caa30891.js": {
+    "file": "chunks/Image-caa30891.js",
     "imports": [
-      "_vendor-7059e03e.js",
+      "_vendor-6802d557.js"
+    ]
+  },
+  "_ProjectList-a24c04df.js": {
+    "file": "chunks/ProjectList-a24c04df.js",
+    "imports": [
+      "_vendor-6802d557.js",
       "_paths-396f020f.js",
-      "_utils-699e7247.js"
+      "_utils-b6745002.js",
+      "_Image-caa30891.js"
     ],
     "css": [
-      "assets/ProjectList-ebde2949.css"
+      "assets/ProjectList-e4d96b19.css"
     ]
   }
 }
