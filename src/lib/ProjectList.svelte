@@ -4,10 +4,14 @@
 	import Image from '$lib/Image.svelte';
 
 	export let projects;
+
+	const getEndDate = durationString => parseInt(durationString.split('–').slice(-1)[0].trim());
+
+	const sortedProjects = projects.sort((projectA, projectB) => getEndDate(projectB.attributes.Dauer) - getEndDate(projectA.attributes.Dauer));
 </script>
 
 <div class="row">
-	{#each projects as project, index (project.attributes.Titel)}
+	{#each sortedProjects as project, index (project.attributes.Titel)}
 		<a
 			class="text-dark"
 			sveltekit:prefetch
