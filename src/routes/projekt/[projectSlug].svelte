@@ -40,10 +40,9 @@
               lazy={index !== 0}
               img={image.attributes}
               src="large"
-              sizes="(max-width: 500px) 500px, (max-width: 991px) 750px, (max-width: 1200px) 1000px, 1500px"
               classString="d-block w-100"
               on:click={() => openLightbox(image.attributes.url, image.attributes.alternativeText)}
-              />
+            />
           </div>
         {/each}
       </div>
@@ -74,7 +73,6 @@
     <Image
       img={photos[0].attributes}
       src="large"
-      sizes="(max-width: 500px) 500px, (max-width: 991px) 750px, (max-width: 1200px) 1000px, 1500px"
       classString="d-block w-100"
       on:click={() => openLightbox(photos[0].attributes.url, photos[0].attributes.alternativeText)}
     />
