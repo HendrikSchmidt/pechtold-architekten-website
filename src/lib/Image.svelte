@@ -10,13 +10,14 @@
         large: '1000w',
         xlarge: '1500w',
     };
-    let srcset = Object.entries(scales).filter(([scale]) => formats[scale]).map(([scale, width]) => `${formats[scale].url} ${width}`).join();
+    const replaceJPGWithWebP = url => url.replace(/\.jpe?g/gi, '.webp')
+    let srcset = Object.entries(scales).filter(([scale]) => formats[scale]).map(([scale, width]) => `${replaceJPGWithWebP(formats[scale].url)} ${width}`).join();
 </script>
 
 <img
     class={classString}
     loading={lazy ? 'lazy' : 'eager'}
-    src={formats[src] ? formats[src].url : formats.small.url}
+    src={formats[src] ? replaceJPGWithWebP(formats[src].url) : replaceJPGWithWebP(formats.small.url)}
     {srcset}
     sizes="(max-width: 575px) 95vw,
            (max-width: 767px) 516px,
