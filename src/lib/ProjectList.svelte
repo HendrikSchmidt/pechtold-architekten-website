@@ -23,7 +23,7 @@
             <Image
               lazy={index > 1}
               img={project.attributes.Fotos.data[0].attributes}
-              src="medium"
+              src="large"
             />
           </div>
         {/if}
