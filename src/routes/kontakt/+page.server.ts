@@ -1,12 +1,12 @@
 import { variables } from '$lib/variables';
 
-export async function get() {
+export async function load() {
 	const response = await fetch(`${variables.apiPath}/kontakt`);
 	const contactData = await response.json();
 
 	if (contactData) {
 		return {
-			body: { contact: contactData.data.attributes },
+			contact: contactData.data.attributes,
 		};
 	}
 

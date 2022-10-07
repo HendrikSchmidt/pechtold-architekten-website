@@ -5,8 +5,9 @@
   import { desluggify, title } from "$lib/utils";
   import Image from "$lib/Image.svelte";
 
-  export let project;
-  const photos = project.Fotos.data;
+  export let data;
+  $: project = data.project;
+  $: photos = project.Fotos.data;
 
   title.set(desluggify($page.params.projectSlug));
 

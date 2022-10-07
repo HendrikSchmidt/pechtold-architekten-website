@@ -1,6 +1,6 @@
 import { variables } from '$lib/variables';
 
-export async function get() {
+export async function load() {
 	const response = await fetch(
 		`${variables.apiPath}/startseite?populate[Projekte][populate][0]=Fotos`
 	);
@@ -8,12 +8,10 @@ export async function get() {
 
 	if (homepageData) {
 		return {
-			body: {
-				contact: homepageData.data.attributes.Kontakt,
-				projects: homepageData.data.attributes.Projekte.data,
-			},
+			contact: homepageData.data.attributes.Kontakt,
+			projects: homepageData.data.attributes.Projekte.data,
 		};
-	}
+	};
 
 	return {
 		status: 404,

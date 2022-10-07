@@ -1,7 +1,7 @@
 import { variables } from '$lib/variables';
 import { sluggify } from '$lib/utils';
 
-export async function get({ params }) {
+export async function load({ params }) {
 	const slugsToIds = await variables.categorySlugsToIds;
 	const response = await fetch(
 		`${variables.apiPath}/kategorien/${
@@ -12,7 +12,7 @@ export async function get({ params }) {
 
 	if (category) {
 		return {
-			body: { projects: category.data.attributes.Projekte.data },
+			projects: category.data.attributes.Projekte.data,
 		};
 	}
 

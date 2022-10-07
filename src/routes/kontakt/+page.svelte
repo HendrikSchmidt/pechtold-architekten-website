@@ -3,7 +3,8 @@
 	import { variables } from '$lib/variables';
 	import { title } from '$lib/utils';
 
-	export let contact;
+	export let data;
+	let contact = data.contact;
 
 	title.set('Kontakt');
 </script>

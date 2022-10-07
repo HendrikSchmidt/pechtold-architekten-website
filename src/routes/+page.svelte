@@ -6,8 +6,7 @@
   import { sluggify } from '$lib/utils';
   import Image from '$lib/Image.svelte';
 
-  export let contact;
-  export let projects;
+  export let data;
 
   title.clear();
 </script>
@@ -16,10 +15,10 @@
   <div class="col d-flex flex-column justify-content-center">
     <div id="homepagePhotos" class="carousel slide overflow-hidden" data-bs-ride="carousel">
       <div class="carousel-inner">
-        {#each projects as project, index (project.attributes.Titel)}
+        {#each data.projects as project, index (project.attributes.Titel)}
           <a class="carousel-item"
              class:active={index === 0}
-             sveltekit:prefetch
+             data-sveltekit-prefetch
              href="{base}/projekt/{sluggify(project.attributes.Titel)}">
              <Image
                lazy={index !== 0}
@@ -52,7 +51,7 @@
   <div class="col flex-grow-0">
     <div class="card mt-3">
       <div class="card-body p-2 text-center small">
-        <SvelteMarkdown source={contact} options={variables.markdownOptions} />
+        <SvelteMarkdown source={data.contact} options={variables.markdownOptions} />
       </div>
     </div>
   </div>

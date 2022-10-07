@@ -1,7 +1,7 @@
-import { variables } from '../../lib/variables';
-import { sluggify } from '../../lib/utils';
+import { variables } from '$lib/variables';
+import { sluggify } from '$lib/utils';
 
-export async function get({ params }) {
+export async function load({ params }) {
 	const slugsToIds = await variables.projectSlugsToIds;
 	const response = await fetch(
 		`${variables.apiPath}/projekte/${slugsToIds[sluggify(params.projectSlug)]}?populate=*`
@@ -10,7 +10,7 @@ export async function get({ params }) {
 
 	if (project) {
 		return {
-			body: { project: project.data.attributes },
+			project: project.data.attributes,
 		};
 	}
 
