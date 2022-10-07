@@ -11,10 +11,10 @@
 </script>
 
 <div class="row">
-  {#each sortedProjects as project, index (project.attributes.Titel)}
+  {#each sortedProjects as project, index (project.id)}
     <a
       class="text-dark"
-      sveltekit:prefetch
+      data-sveltekit-prefetch
       href="{base}/projekt/{sluggify(project.attributes.Titel)}"
     >
       <div class="card mb-3">
