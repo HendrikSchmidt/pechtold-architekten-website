@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
 	import { sluggify } from './utils';

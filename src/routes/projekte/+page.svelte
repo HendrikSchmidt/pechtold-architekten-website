@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import ProjectList from '$lib/ProjectList.svelte';
 	import { title } from '$lib/utils';
 

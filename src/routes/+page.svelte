@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import SvelteMarkdown from 'svelte-markdown';
   import { variables } from '$lib/variables';
   import { title } from '$lib/utils';

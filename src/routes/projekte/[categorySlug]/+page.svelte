@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import ProjectList from '$lib/ProjectList.svelte';
 	import { page } from '$app/stores';
 	import { desluggify, title } from '$lib/utils';
