@@ -1,1 +1,0 @@
-import{A as c}from"./index-2d03a8b1.js";function l(){const{subscribe:e,set:t}=c("");return{subscribe:e,set:s=>{t(`${s} \u2022 Pechtold Architekten`)},clear:()=>{t("Pechtold Architekten")}}}const i=l(),o=e=>e.replaceAll(" ","_"),a=e=>e.replaceAll("_"," ");export{a as d,o as s,i as t};
