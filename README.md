@@ -6,6 +6,8 @@ Powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/package
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
+Make sure you the CMS is also running locally.
+
 ```bash
 npm run dev
 
