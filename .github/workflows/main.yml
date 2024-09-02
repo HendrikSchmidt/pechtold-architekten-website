@@ -1,9 +1,11 @@
 # This is a basic workflow to automatically build a Sveltekit app and deploy it to GitHub Pages
 
-name: Deploy to GitHub Pages
+name: Build & Deploy to GitHub Pages
 
 on:
   push:
+    branches: [master]
+  pull_request:
     branches: [master]
   workflow_dispatch:
   repository_dispatch:
@@ -22,6 +24,7 @@ jobs:
           npm run build
 
       - name: Deploy to GitHub Pages
+        if: ${{ github.ref == 'refs/heads/master' }}
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
